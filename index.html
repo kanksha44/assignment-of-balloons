@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballon Game</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="gas-container">
+            <img src="./Assets/copy of gas.png" alt="gas container">
+
+
+        </div>
+        <div class="cloud">
+            <img src="./Assets/Symbol 27.png" alt="cloud">
+        </div>
+        <div class="pump" onclick="togglePumpAnimation()">
+            <img src="./Assets/Symbol 320001.png" alt="pump">
+
+        </div>
+        <div class="ballon">
+            <img id="balloon" src="./Assets/Symbol 100001.png" alt="ballon" onclick="inflateBalloon()">
+
+            <!-- <img class="letters" src="./Assets/Symbol 10001.png" alt="letter A"> -->
+
+            <div id="popEffect"></div> <!-- Added pop effect element -->
+
+
+        </div>
+    </div>
+    <script>
+
+        // // Get the pump element
+        // const pump = document.querySelector('.pump');
+
+        // // Toggle the pump animation on and off
+        // function togglePumpAnimation() {
+        //     pump.classList.toggle('pump-animation');
+        // }
+
+        // // Start the pump animation
+        // togglePumpAnimation();
+
+        // // Set an interval to change the pump animation every 3 seconds
+        // setInterval(togglePumpAnimation, 3000);
+
+
+        //========================================
+
+        // function inflateBalloon() {
+        //     var balloon = document.getElementById('balloon');
+        //     balloon.classList.toggle('inflated');
+        // }
+
+        // function popBalloon() {
+        //     var popEffect = document.getElementById('popEffect');
+        //     popEffect.classList.add('popped');
+        // }
+
+
+
+
+        //===================================================
+
+        // // Get the pump element
+        // const pump = document.querySelector('.pump');
+
+        // // Toggle the pump animation on and off
+        // function togglePumpAnimation() {
+        //     pump.classList.toggle('pump-animation');
+        // }
+
+        // // Start the pump animation
+        // togglePumpAnimation();
+
+        // // Set an interval to change the pump animation every 3 seconds
+        // setInterval(togglePumpAnimation, 3000);
+
+        // function inflateBalloon() {
+        //     var balloon = document.getElementById('balloon');
+        //     balloon.classList.toggle('inflated');
+        // }
+
+        // // Attach click event listener to the pump
+        // pump.addEventListener('click', function () {
+        //     inflateBalloon();
+        // });
+
+
+
+
+
+
+
+
+        // const pump = document.querySelector('.pump');
+
+        // // Toggle the pump animation on and off
+        // function togglePumpAnimation() {
+        //     pump.classList.toggle('pump-animation');
+        //     inflateBalloons();
+        // }
+
+        // // Start the pump animation and balloon actions on pump click
+        // pump.addEventListener('click', function () {
+        //     togglePumpAnimation();
+        // });
+
+        // function inflateBalloons() {
+        //     var balloons = document.querySelectorAll('balloonAnimation');
+
+        //     balloons.forEach(function (balloon) {
+        //         balloon.classList.toggle('inflated');
+        //     });
+        // }
+
+        //====================================
+
+
+        // This code is more moving the pump in y direction onclick
+
+        // const pump = document.querySelector('.pump');
+
+        // function togglePumpAnimation() {
+        //     pump.classList.toggle('pump-animation');
+        // }
+
+        // function inflateBalloon() {
+        //     var balloon = document.getElementById('balloon');
+        //     balloon.classList.toggle('inflated');
+        // }
+
+        // // Attach the inflateBalloon function to each balloon element
+        // var balloons = document.querySelectorAll('.balloon');
+        // balloons.forEach(function (balloon) {
+        //     balloon.addEventListener('click', inflateBalloon);
+        // });
+
+
+        //====================================
+
+
+        //         const pump = document.querySelector('.pump');
+
+        // const balloon = document.getElementById('balloon');
+
+        // function togglePumpAnimation() {
+        //   pump.classList.toggle('pump-animation');
+        //   balloon.classList.toggle('inflated');
+        // }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //   togglePumpAnimation();
+        // });
+
+        //this code works and final 1
+        // const pump = document.querySelector('.pump');
+        // const balloon = document.getElementById('balloon');
+
+        // function inflateBalloon() {
+        //     pump.classList.toggle('pump-animation');
+        //     balloon.classList.toggle('inflated');
+
+        // }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //     inflateBalloon();
+        // });
+
+
+
+        // const pump = document.querySelector('.pump');
+        // const balloon = document.getElementById('balloon');
+
+        // let pumpClicked = false;
+
+        // function togglePumpAnimation() {
+        //     if (!pumpClicked) {
+        //         pump.classList.toggle('pump-animation');
+        //         balloon.classList.toggle('inflated');
+        //         pumpClicked = true;
+        //     }
+        // }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //     togglePumpAnimation();
+        // });
+
+
+
+        //this code worked and can be used as final 2 
+
+        //         const pump = document.querySelector('.pump');
+        // const balloon = document.getElementById('balloon');
+
+        // let pumpClicked = false;
+
+        // function togglePumpAnimation() {
+        //   if (!pumpClicked) {
+        //     pump.classList.toggle('pump-animation');
+        //     balloon.classList.toggle('inflated');
+        //     pumpClicked = true;
+        //   } else {
+        //     pumpClicked = false;
+        //     pump.classList.remove('pump-animation');
+        //     balloon.classList.remove('inflated');
+        //     setTimeout(function() {
+        //       pump.classList.add('pump-animation');
+        //       balloon.classList.add('inflated');
+        //     }, 10);
+        //   }
+        // }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function() {
+        //   togglePumpAnimation();
+        // });
+
+
+        //
+
+        const balloons = document.querySelectorAll('#balloon');
+
+        function inflateBalloon() {
+            this.classList.toggle('inflated');
+        }
+
+        balloons.forEach(function (balloon) {
+            balloon.addEventListener('click', inflateBalloon);
+        });
+
+        const pump = document.querySelector('.pump');
+        const balloon = document.getElementById('balloon');
+
+        let pumpClicked = false;
+
+        function togglePumpAnimation() {
+            console.log("hehehehe::")
+            if (!pumpClicked) {
+                pump.classList.toggle('pump-animation');
+                balloon.classList.toggle('inflated');
+                pumpClicked = true;
+            } else {
+                pumpClicked = false;
+                pump.classList.remove('pump-animation');
+                balloon.classList.remove('inflated');
+                setTimeout(function () {
+                    pump.classList.add('pump-animation');
+                    balloon.classList.add('inflated');
+                }, 2);
+            }
+        }
+
+        // Attach the click event listener to the pump element
+        pump.addEventListener('click', function () {
+            togglePumpAnimation();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

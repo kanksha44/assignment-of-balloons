@@ -1,0 +1,172 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-image: url(./Assets/Symbol\ 3\ copy.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.gas-container {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  z-index: 9;
+}
+.cloud {
+  position: absolute;
+  bottom: -6%;
+  right: 7%;
+  z-index: 1;
+}
+.pump {
+  position: absolute;
+  right: 6.7%;
+  bottom: 40%;
+  animation: pumpAnimation 1s infinite alternate;
+}
+@keyframes pumpAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(140px);
+  }
+}
+.ballon{
+    position: absolute;
+bottom: 49%;
+right: 25%;
+}
+
+#balloon {
+    transition: transform 0.5s;
+}
+
+#balloon.inflated {
+    transform: scale(1.25);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-image: url(./Assets/Symbol\ 3\ copy.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.gas-container {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  z-index: 9;
+}
+
+.cloud {
+  position: absolute;
+  bottom: -6%;
+  right: 7%;
+  z-index: 1;
+}
+
+.pump {
+  position: absolute;
+  right: 6.7%;
+  bottom: 40%;
+  /* animation: pumpAnimation 10s infinite alternate; */
+  animation: none;
+  cursor: pointer;
+}
+
+.pump.pump-animation {
+  /* animation: pumpAnimation 1s infinite alternate; */
+  animation: pumpAnimation 1s backwards;
+}
+
+@keyframes pumpAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(140px);
+  }
+}
+
+#balloon {
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.ballon img {
+  height: 100px;
+  position: absolute;
+  right: 33%;
+  bottom: 51.2%;
+}
+
+/* #balloon.inflated {
+  animation: balloonAnimation 5s;
+} */
+
+.letters {
+  transition: transform 0.5s;
+  cursor: pointer;
+  position: fixed;
+}
+
+#balloon.inflated, .letters.inflated  {
+  animation: balloonAnimation 5s, balloonFlowAnimation 3s linear forwards;
+  animation-delay: 0s, 5s;
+}
+
+@keyframes balloonAnimation {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+  101% {
+    transform: scale(1);
+  }
+}
+#balloon.inflated {
+  height: 200px;
+  position: absolute;
+  right: 31%;
+  bottom: 44%;
+}
+@keyframes balloonFlowAnimation {
+  0% {
+    right: 33%;
+    bottom: 51.2%;
+  }
+  100% {
+    right: 70%;
+    bottom: 20%;
+  }
+}
+/* #balloon.inflated {
+  animation: balloonFlowAnimation 3s linear forwards;
+} */

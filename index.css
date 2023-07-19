@@ -112,8 +112,8 @@ right: 25%;
 .ballon img {
   height: 100px;
   position: absolute;
-  right: 33%;
-  bottom: 51.2%;
+  right: 45%;
+  bottom: 66%;
 }
 
 /* #balloon.inflated {
@@ -126,7 +126,8 @@ right: 25%;
   position: fixed;
 }
 
-#balloon.inflated, .letters.inflated  {
+#balloon.inflated,
+.letters.inflated {
   animation: balloonAnimation 5s, balloonFlowAnimation 3s linear forwards;
   animation-delay: 0s, 5s;
 }
@@ -154,8 +155,8 @@ right: 25%;
 #balloon.inflated {
   height: 200px;
   position: absolute;
-  right: 31%;
-  bottom: 44%;
+  right: 42%;
+  bottom: 57%;
 }
 @keyframes balloonFlowAnimation {
   0% {

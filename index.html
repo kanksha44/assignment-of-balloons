@@ -19,7 +19,7 @@
         <div class="cloud">
             <img src="./Assets/Symbol 27.png" alt="cloud">
         </div>
-        <div class="pump" onclick="togglePumpAnimation()">
+        <div class="pump" onclick="togglePumpAnimation()" onclick="handlePump()">
             <img src="./Assets/Symbol 320001.png" alt="pump">
 
         </div>
@@ -227,42 +227,146 @@
 
         //
 
-        const balloons = document.querySelectorAll('#balloon');
 
-        function inflateBalloon() {
-            this.classList.toggle('inflated');
-        }
+        // imp js ************************************ by didi
 
-        balloons.forEach(function (balloon) {
-            balloon.addEventListener('click', inflateBalloon);
-        });
+        // const balloons = document.querySelectorAll('#balloon');
 
+        // function inflateBalloon() {
+        //     this.classList.toggle('inflated');
+        // }
+
+        // balloons.forEach(function (balloon) {
+        //     balloon.addEventListener('click', inflateBalloon);
+        // });
+
+        // const pump = document.querySelector('.pump');
+        // const balloon = document.getElementById('balloon');
+
+        // let pumpClicked = false;
+
+        // function togglePumpAnimation() {
+        //     console.log("hehehehe::")
+        //     if (!pumpClicked) {
+        //         pump.classList.toggle('pump-animation');
+        //         balloon.classList.toggle('inflated');
+        //         pumpClicked = true;
+        //     } else {
+        //         pumpClicked = false;
+        //         pump.classList.remove('pump-animation');
+        //         balloon.classList.remove('inflated');
+        //         setTimeout(function () {
+        //             pump.classList.add('pump-animation');
+        //             balloon.classList.add('inflated');
+        //         }, 2);
+        //     }
+        // }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //     togglePumpAnimation();
+        // });
+
+        // imp js ************************************ by didi
+
+
+
+
+        // js by vicky start ***********************///////////////////
         const pump = document.querySelector('.pump');
         const balloon = document.getElementById('balloon');
 
-        let pumpClicked = false;
+        let pumpClicked = 0;
 
         function togglePumpAnimation() {
-            console.log("hehehehe::")
-            if (!pumpClicked) {
-                pump.classList.toggle('pump-animation');
-                balloon.classList.toggle('inflated');
-                pumpClicked = true;
-            } else {
-                pumpClicked = false;
+
+            // pump.classList.add('pump-animation');
+            pumpClicked++;
+            if (pumpClicked === 1) {
+                pump.classList.add('pump-animation');
+                balloon.style.transform = 'scale(1.25)';
+                console.log("1 click", pumpClicked)
                 pump.classList.remove('pump-animation');
-                balloon.classList.remove('inflated');
-                setTimeout(function () {
-                    pump.classList.add('pump-animation');
-                    balloon.classList.add('inflated');
-                }, 2);
+
+
+            } else if (pumpClicked === 2) {
+                pump.classList.add('pump-animation');
+                balloon.style.transform = 'scale(1.5)';
+                console.log("2 click", pumpClicked)
+                pump.classList.remove('pump-animation');
+
+            } else if (pumpClicked === 3) {
+                // pump.classList.add('pump-animation');
+                balloon.style.transform = 'scale(1.75)';
+                console.log("3 click", pumpClicked)
+                pump.classList.remove('pump-animation');
+
+            } else if (pumpClicked === 4) {
+                handlePump()
+                balloon.style.transform = 'scale(2)';
+                console.log("4 click", pumpClicked)
+
+
+            } else if (pumpClicked === 5) {
+                // balloon.style.transform = 'scale(2)';
+                balloon.classList.add('flow-animation');
+                console.log("5 click", pumpClicked);
             }
+
+
+
+
+        }
+        handlePump(){
+            pump.classList.toggle('pump-animation');
+
         }
 
-        // Attach the click event listener to the pump element
-        pump.addEventListener('click', function () {
-            togglePumpAnimation();
-        });
+
+
+
+
+
+
+
+
+
+
+
+        // if (pumpClicked === 4) {
+        //     // Reset pumpClicked to 0 after the animation
+        //     setTimeout(function () {
+        //         pumpClicked = 0;
+        //     }, 3000);
+        // }
+        //      if(pumpClicked === 4)  {
+        //     balloon.style.transform = 'scale(2)'
+        //     console.log("4 click", pumpClicked)
+        // }
+
+        //     //If pumpClicked is 4 or more, reset it to 0 to restart the cycle
+        // if (pumpClicked >= 4) {
+        //         pumpClicked = 0;
+        //     }
+
+
+        //     }
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //     togglePumpAnimation();
+        // });
+
+
+        // // Attach the click event listener to the pump element
+        // pump.addEventListener('click', function () {
+        //     togglePumpAnimation();
+        // });
+
+        // js by vicky end ***********************///////////////////
+
+
+
 
 
 

@@ -94,7 +94,7 @@ right: 25%;
   /* animation: pumpAnimation 1s infinite alternate; */
   animation: pumpAnimation 1s backwards;
 }
-
+/* 
 @keyframes pumpAnimation {
   from {
     transform: translateY(0);
@@ -102,7 +102,20 @@ right: 25%;
   to {
     transform: translateY(140px);
   }
+} */
+
+@keyframes pumpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(140px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
+
 
 #balloon {
   transition: transform 0.5s;
@@ -112,8 +125,8 @@ right: 25%;
 .ballon img {
   height: 100px;
   position: absolute;
-  right: 33%;
-  bottom: 51.2%;
+  right: 45%;
+  bottom: 65.2%;
 }
 
 /* #balloon.inflated {
@@ -126,7 +139,9 @@ right: 25%;
   position: fixed;
 }
 
-#balloon.inflated, .letters.inflated  {
+/* didi code starts--- */
+
+/* #balloon.inflated, .letters.inflated  {
   animation: balloonAnimation 5s, balloonFlowAnimation 3s linear forwards;
   animation-delay: 0s, 5s;
 }
@@ -166,7 +181,32 @@ right: 25%;
     right: 70%;
     bottom: 20%;
   }
-}
+} */
+
+/* didi code ends--- */
+
 /* #balloon.inflated {
   animation: balloonFlowAnimation 3s linear forwards;
 } */
+
+/* vicky starts */
+/* #balloon.inflated {
+  transform: scale(1.2);
+} */
+
+@keyframes balloonFlowAnimation {
+  0% {
+    right: 33%;
+    bottom: 51.2%;
+  }
+  100% {
+    right: 70%;
+    bottom: 20%;
+  }
+}
+
+.flow-animation {
+  animation: balloonFlowAnimation 3s linear forwards;
+}
+
+/* vicky ends */
